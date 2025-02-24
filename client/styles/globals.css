@@ -32,6 +32,10 @@ main.container section:first-child {
   margin-top: var(--spacing-double);
 }
 
+main.container #post section:first-child {
+  margin-top: 0;
+}
+
 section {
   padding-top: var(--spacing-double);
   padding-bottom: var(--spacing-double);
@@ -69,9 +73,14 @@ section {
       margin-bottom: var(--spacing-triple);
     }
 
+    /* Blog posts */
     #post section {
       padding-top: var(--spacing-single);
-      padding-bottom: var(--spacing-single);
-      margin-bottom: var(--spacing-single);
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    #post section:first-child {
+      padding-top: 0;
     }
 }
