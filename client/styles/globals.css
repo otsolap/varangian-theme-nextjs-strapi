@@ -28,14 +28,6 @@ main {
   background-color: var(--color-secondary-900);
 }
 
-main.container section:first-child {
-  margin-top: var(--spacing-double);
-}
-
-main.container #post section:first-child {
-  margin-top: 0;
-}
-
 section {
   padding-top: var(--spacing-double);
   padding-bottom: var(--spacing-double);
@@ -66,6 +58,14 @@ section {
 
     .desktop-only {
       display: block;
+    }
+
+    main.container section:first-child {
+      margin-top: var(--spacing-double);
+    }
+    
+    main.container #post section:first-child {
+      margin-top: 0;
     }
 
     section {

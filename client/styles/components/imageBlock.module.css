@@ -52,7 +52,7 @@
 .dialogImage {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .dialogButton {
@@ -81,6 +81,7 @@
 
 /* Tablet Styles */
 @media (width >= 768px) {
+
     .imageBlock {
         width: auto;
     }
@@ -89,5 +90,4 @@
         margin-top: var(--spacing-double);
         margin-bottom: var(--spacing-double);
     }
-
 }
