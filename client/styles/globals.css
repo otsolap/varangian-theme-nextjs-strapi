@@ -50,6 +50,16 @@ section {
   display: none;
 }
 
+/* Tablet Styles */
+@media (width >= 768px) {
+    /* Blog posts */
+    #post section {
+      padding-top: var(--spacing-single);
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+}
+
 /* Desktop Styles */
 @media (width >= 1440px) {
     .mobile-only {
@@ -76,12 +86,12 @@ section {
 
     /* Blog posts */
     #post section {
-      padding-top: var(--spacing-single);
-      padding-bottom: 0;
+      padding-top: 0;
+      padding-bottom: var(--spacing-single);
       margin-bottom: 0;
     }
 
-    #post section:first-child {
-      padding-top: 0;
+    #post section:last-child {
+      padding-bottom: 0;
     }
 }

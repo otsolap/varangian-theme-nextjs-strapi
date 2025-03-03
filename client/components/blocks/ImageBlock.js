@@ -21,7 +21,7 @@ const ImageBlock = ({ image, caption, openLarge }) => {
     image ? (
       <section className={styles.wrapper}>
         <figure 
-          className={styles.imageBlock}
+          className={`${styles.imageBlock} ${openLarge ? styles.imageBlockClickable : ''}`}
           onClick={handleImageClick}
           style={openLarge ? { cursor: 'pointer' } : {}}
         >
