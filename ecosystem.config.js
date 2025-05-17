@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'api',
+      name: 'venture-api',
       script: 'npm',
       args: 'run start',
       cwd: './api',
@@ -12,7 +12,7 @@ module.exports = {
       log_date_format: 'DD-MM-YYYY HH:mm:ss',
     },
     {
-      name: 'client',
+      name: 'venture-client',
       script: 'npm',
       args: 'run start',
       cwd: './client',
