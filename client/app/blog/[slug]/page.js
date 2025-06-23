@@ -5,7 +5,7 @@ import Blocks from "@/components/Blocks"
 import ArticleHeading from "@/components/articles/ArticleHeading";
 import ArticleAuthor from "@/components/articles/ArticleAuthor";
 import BlogSection from 'components/blocks/BlogSection';
-import TOC from "@/partials/article/TOC";
+import TableOfContents from "@/partials/article/TableOfContents";
 import styles from '@/styles/pages/blog.module.css'
 import { generateOpenGraphImages } from "@/utils/helpers";
 import RelatedArticles from 'components/articles/RelatedArticles';
@@ -26,7 +26,7 @@ export default async function BlogSlug(props) {
         }
         <Blocks blocks={blocks} />
       </article>
-      <TOC blocks={blocks} title={article.title} />
+      <TableOfContents blocks={blocks} title={article.title} />
     </div>
     <ArticleAuthor author={author} />
     <RelatedArticles

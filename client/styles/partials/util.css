@@ -106,8 +106,32 @@
   border-width: 0;
 }
 
+.youtube {
+    border: var(--spacing-quarter);
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-single);
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
 /* Desktop Styles */
 @media (width >= 1440px) {
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
   .container {
     max-width: var(--container-desktop);
   }

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import styles from '@/styles/components/toc.module.css'
+import styles from '@/styles/components/tableOfContents.module.css'
 
-function TOC({ blocks }) {
+function TableOfContents ({ blocks }) {
   const headings = blocks
   .filter((block) => block.__component === "blocks.article-text-block")
   .flatMap((block) => {
@@ -41,4 +41,4 @@ function TOC({ blocks }) {
   );
 }
 
-export default TOC;
+export default TableOfContents;

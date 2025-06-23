@@ -1,9 +1,9 @@
 .banner {
     display: flex;
     flex-direction: column;
-    border: 1px solid transparent;
-    border-radius: 0px;
     padding: var(--spacing-double);
+    border-radius: 0px;
+    border: 1px solid transparent;
 }
 
 .imageContainer {
@@ -40,7 +40,6 @@
     .banner {
         flex-direction: row;
         gap: var(--spacing-triple);
-        padding: var(--spacing-double) var(--spacing-triple);
     }
 
     .imageContainer {

@@ -2,12 +2,11 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-single);
+     gap: var(--spacing-single-half);
 }
 
 .nav {
-    background-color: var(--color-white);
-    border-radius: var(--spacing-single-quarter);
+    background-color: var(--color-secondary-700);
 }
 
 .wrapper {
@@ -30,14 +29,16 @@
 
 /* Desktop Styles */
 @media (width >= 1440px) {
+    
     .nav {
-        max-width: 440px;
-        border-left: 2px solid var(--color-white);
+        border-left: 2px solid var(--color-primary-500);
         height: min-content;
     }
 
     .wrapper {
         padding-left: var(--spacing-double);
         padding-right: var(--spacing-double);
+        width: 100%;
+        max-width: var(--container-mobile);
     }
 }

@@ -1,5 +1,6 @@
-.section {
+.container {
   background-color: var(--color-secondary-800);
+  padding: var(--spacing-double);
 }
 
 /* Header */
@@ -181,13 +182,13 @@
 /* Desktop Styles */
 @media (width >= 1440px) {
 
-    /* Single input Widths */
+  /* Single input Widths */
   .width-third {
     max-width: 33.33%;
     flex: 0 0 33.33%;
   }
   
-  .section {
+  .container {
     border-radius: var(--spacing-single-quarter);
   }
 
