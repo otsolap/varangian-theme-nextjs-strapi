@@ -10,6 +10,12 @@
     padding-top: var(--spacing-single);
 }
 
+.tableHeader,
+.tableCell {
+    padding: var(--spacing-half) var(--spacing-three-quarters);
+    border: 1px solid;
+}
+
 .tableHeader {
     text-align: center;
     border: 1px solid;
@@ -17,10 +23,9 @@
     font-weight: 700;
 }
 
-.tableHeader,
 .tableCell {
-    padding: var(--spacing-single) var(--spacing-single-half);
     border: 1px solid;
+    text-align: left;
 }
 
 .tableRow {
@@ -34,8 +39,8 @@
     line-height: 24px;
 }
 
-.tableCell {
-    text-align: left;
+.tableRow:nth-child(even) {
+    background-color: var(--color-tertiary-500);
 }
 
 /* Tablet Styles */
