@@ -1,7 +1,3 @@
-.container {
-  margin: 0 auto;
-  width: 100%;
-}
 
 /* buttons */
 .button {
@@ -130,9 +126,5 @@
 
   .desktop-only {
     display: block;
-  }
-
-  .container {
-    max-width: var(--container-desktop);
   }
 }

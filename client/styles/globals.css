@@ -31,8 +31,9 @@ main {
 }
 
 section {
-  padding-top: var(--spacing-double);
-  padding-bottom: var(--spacing-double);
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--spacing-double);
   max-width: var(--container-desktop);
 }
 

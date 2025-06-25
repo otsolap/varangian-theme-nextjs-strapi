@@ -26,7 +26,7 @@ function TableOfContents ({ blocks }) {
     <nav className={styles.nav}>
       {headings && headings.length > 0 && (
           <ul className={styles.wrapper}>
-          <h4>Table of Contents</h4>
+          <h4 className={styles.title}>Table of Contents</h4>
             {headings.map((heading, index) => (
               <li className={styles.list} key={index}>
                 <Link className={styles.link}  href={`#${heading.id}`}>
