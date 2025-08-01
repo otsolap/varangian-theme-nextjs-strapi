@@ -1,4 +1,9 @@
 .banner {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
     padding: var(--spacing-double);
@@ -37,7 +42,7 @@
 /* Tablet Styles */
 @media (width >= 768px) {
 
-    .banner {
+    .wrapper {
         flex-direction: row;
         gap: var(--spacing-triple);
     }
@@ -59,7 +64,7 @@
 /* Desktop Styles */
 @media (width >= 1440px) {
 
-    .banner {
+    .wrapper {
         border-radius: var(--spacing-single-quarter);
     }
 }

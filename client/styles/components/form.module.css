@@ -1,5 +1,10 @@
+.formEmbed {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .container {
-  background-color: var(--color-secondary-800);
+  background-color: var(--color-blue-semidark);
   padding: var(--spacing-double);
 }
 
@@ -219,7 +224,7 @@
     border-radius: var(--spacing-quarter);
     width: inherit;
     height: inherit;
-    box-shadow: var(--spacing-half) var(--spacing-half) 0px 0px var(--color-primary-500);
+    box-shadow: var(--spacing-half) var(--spacing-half) 0px 0px var(--color-orange);
   }
 
 }

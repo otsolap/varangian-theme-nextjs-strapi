@@ -29,7 +29,7 @@ const SubscribeForm = ({ title, description, email, formID, redirect, link, succ
   )
 
   return (
-    <section>
+    <section className={styles.formEmbed}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
             <article className={styles.content}>

@@ -22,7 +22,7 @@ export const ArchiveSection = ({ items, categories }) => {
 
   return (
       <section>
-        <div>
+        <div className={styles.container}>
           {categories && 
             <header className={styles.header}>
               <TaxonomyLinks categories={categories} />
