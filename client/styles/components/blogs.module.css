@@ -98,8 +98,19 @@
     object-fit: cover;
     object-position: 50% 50%;
     aspect-ratio: 16/9;
-    border-bottom: 1px solid var(--color-white);
+    border-bottom: 1px solid;
 }
+
+.bgPrimary .image,
+.bgPrimary .footer {
+    border-color: var(--color-black);
+}
+
+.bgSecondary .image,
+.bgSecondary .footer {
+    border-color: var(--color-white);
+}
+
 
 .itemContent  {
     display: flex;
@@ -128,14 +139,6 @@
 
 .date {
     margin-bottom: var(--spacing-single);
-}
-
-.bgPrimary .footer {
-    border-color: var(--color-black);
-}
-
-.bgSecondary .footer {
-    border-color: var(--color-white);
 }
 
 .footer {
