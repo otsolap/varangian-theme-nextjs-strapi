@@ -31,7 +31,7 @@ const FormEmbed = ({ form }) => {
   )
 
   return (
-    <section>
+    <section className={styles.formEmbed}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
           {inputs.length ? (

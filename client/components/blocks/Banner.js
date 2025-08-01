@@ -5,8 +5,8 @@ import CustomLink from "@/partials/util/CustomLink";
 
 const Banner = ({ title, description, image, button, selectTheme }) => {
   return (
-    <section>
-      <div className={`${styles.banner}  bg-${selectTheme} ${selectTheme === 'primary' ? 'color-black' : ''}` }>
+    <section className={styles.banner}>
+      <div className={`${styles.wrapper}  bg-${selectTheme} ${selectTheme === 'primary' ? 'color-black' : ''}` }>
           {image && (
             <figure className={styles.imageContainer}>
               <NextImage

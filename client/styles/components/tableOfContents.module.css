@@ -7,8 +7,8 @@
 
 .nav {
     height: min-content;
-    background-color: var(--color-secondary-700);
-    border: 2px solid var(--color-primary-500);
+    background-color: var(--color-blue);
+    border: 2px solid var(--color-orange);
     border-radius: var(--spacing-quarter);
 }
 
@@ -27,7 +27,7 @@
 
 .link:hover,
 .link:focus {
-  color: var(--color-primary-500);
+  color: var(--color-orange);
 }
 
 /* Desktop Styles */
