@@ -5,6 +5,7 @@
     padding: var(--spacing-double) var(--spacing-single);
     background-color: var(--color-blue);
     max-width: var(--container-desktop);
+    margin: 0 auto;
 }
 
 .category {
