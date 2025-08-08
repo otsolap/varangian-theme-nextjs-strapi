@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   color: var(--color-black);
-  background-color: var(--color-orange-semidark);
+  background-color: var(--color-secondary-semidark);
   padding: var(--spacing-half) var(--spacing-single);
   border-radius: var(--spacing-single);
   text-shadow: none;
@@ -18,7 +18,7 @@
 
 .button:hover,
 .button:focus {
-  background-color: var(--color-orange);
+  background-color: var(--color-secondary);
 }
 
 .button--secondary,
@@ -51,7 +51,7 @@
 
 .button--link:hover,
 .button--link:focus {
-  color: var(--color-orange-semidark);
+  color: var(--color-secondary-semidark);
 }
 
 .button--disabled {
@@ -63,15 +63,15 @@
 
 /* Background and Color Classes */
 .bg-primary {
-  background-color: var(--color-orange);
+  background-color: var(--color-secondary);
 }
 
 .bg-secondary {
-  background-color: var(--color-blue-semidark);
+  background-color: var(--color-primary-semidark);
 }
 
 .bg-tertiary {
-  background-color: var(--color-teal-dark);
+  background-color: var(--color-tertiary-dark);
 }
 
 .bg-transparent {
@@ -83,11 +83,11 @@
 }
 
 .color-black {
-  color: var(--color-blue-dark);
+  color: var(--color-primary-dark);
 }
 
 .color-primary {
-  color: var(--color-orange);
+  color: var(--color-secondary);
 }
 
 /* Screen Reader Only Class */
