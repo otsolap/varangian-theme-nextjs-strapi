@@ -17,7 +17,7 @@ export default function ServicesSection({ title, description, selectTheme, servi
           {services.map((item, i) => {
             return (
               <ServicesItem
-                key={i}
+                key={item.id || `services-item-${i}`}
                 image={item.image}
                 title={item.title}
                 description={item.description}

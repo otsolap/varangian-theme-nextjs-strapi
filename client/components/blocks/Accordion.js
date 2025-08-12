@@ -16,7 +16,7 @@ const Accordion = ({ title, description, image, accordions }) => {
             {accordions && (
                 <div className={styles.content}>
                   {accordions.map((item, i) => (
-                      <AccordionItem key={i} {...item} />
+                      <AccordionItem  key={item.id || `accordion-${i}`} {...item} />
                   ))}
               </div>
             )}

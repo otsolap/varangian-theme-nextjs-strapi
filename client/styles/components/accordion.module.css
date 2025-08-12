@@ -127,6 +127,7 @@
 
 /* Desktop Styles */
 @media (width >= 1440px) {
+  
   .header {
     max-width: var(--container-ipad-landscape);
     flex: 0 0 50%;

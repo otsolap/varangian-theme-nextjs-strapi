@@ -41,7 +41,7 @@ export default function Blogs({ title, description, selectTheme, blogs, filter})
         {blogItems.map((item, i) => {
           return (
             <BlogItem
-              key={i}
+              key={item.id || `blogs-section-item-${i}`}
               image={item.image}
               title={item.title}
               description={item.description}

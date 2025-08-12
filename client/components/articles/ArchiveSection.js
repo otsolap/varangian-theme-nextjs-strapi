@@ -31,7 +31,7 @@ export const ArchiveSection = ({ items, categories }) => {
           {paginatedPosts.length > 0 ? (
             paginatedPosts.map((item, i) => (
                 <BlogItem
-                  key={i}
+                  key={item.id || `blog-item-${i}`}
                   image={item.image}
                   title={item.title}
                   description={item.description}

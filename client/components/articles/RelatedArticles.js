@@ -37,7 +37,7 @@ export default function RelatedArticles ({ title, description, selectTheme, docu
             {items.data.map((item, i) => {
                 return (
                     <BlogItem
-                    key={i}
+                     key={item.id || `related-blog-item-${i}`}
                     image={item.image}
                     title={item.title}
                     description={item.description}
