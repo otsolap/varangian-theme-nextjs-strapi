@@ -27,7 +27,6 @@ main {
   max-width: 100%;
   position: relative;
   background-color: var(--color-primary-dark);
-  padding-bottom: var(--spacing-double);
 }
 
 section {

@@ -34,7 +34,7 @@ export default async function BlogSlug(props) {
       categoryTitle={category.title}
       currentCategory={category.slug}
       documentId={documentId}
-      selectTheme="secondary"
+      selectTheme="primary"
     />
     <Blogs 
       title={config.blog.LATEST_ARTICLES_TITLE}

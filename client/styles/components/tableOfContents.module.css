@@ -1,11 +1,11 @@
-.nav,
+.tableOfContents,
 .wrapper {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-single-half);
 }
 
-.nav {
+.tableOfContents {
     height: min-content;
     background-color: var(--color-primary);
     border: 2px solid var(--color-secondary);

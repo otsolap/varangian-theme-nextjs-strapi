@@ -419,7 +419,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     blocks: Schema.Attribute.DynamicZone<
       [
         'blocks.video-embed',
-        'blocks.text-area',
         'blocks.table',
         'blocks.quote',
         'blocks.notes',
