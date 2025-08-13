@@ -71,7 +71,7 @@ export async function formSubmit(state, formData) {
     };
 
     try {
-        await fetch(getStrapiURL(`/${config.forms.COLLECTIONS_PATH}`), {
+        await fetch(getStrapiURL(`/${config.endpoints.contacts}`), {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(data)

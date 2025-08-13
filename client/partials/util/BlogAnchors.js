@@ -16,7 +16,7 @@ const BlogAnchors = ({ blogAnchors }) => {
 
   const fetchData = async () => {
     try {
-      const res = await fetch(getStrapiURL(`/${config.blocks.API_CONTENT_BLOG_SECTION_LATEST_QUERY}`));
+      const res = await fetch(getStrapiURL(`/${config.blocks.blogsLatestArticles}`));
       const data = await res.json();
       setItems(data);
     } catch (error) {
@@ -34,7 +34,7 @@ const BlogAnchors = ({ blogAnchors }) => {
             <Link 
               className={styles.link} 
               key={item.id || `blog-item-${i}`}
-              href={`/${config.blog.BLOG_PATH}/${item.slug}`}
+              href={`/${config.blog.path}/${item.slug}`}
               >
               {item.title}
             </Link>

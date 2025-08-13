@@ -11,7 +11,7 @@ export default function Blogs({ title, description, selectTheme, blogs, filter})
 
   const fetchData = async () => {
     try {
-      const res = await fetch(getStrapiURL(`/${config.blocks.API_CONTENT_BLOG_SECTION_LATEST_QUERY}`));
+      const res = await fetch(getStrapiURL(`/${config.blocks.blogsLatestArticles}`));
       const data = await res.json();
       setItems(data);
     } catch (error) {
@@ -53,8 +53,8 @@ export default function Blogs({ title, description, selectTheme, blogs, filter})
         })}
       </div>
       <footer className={styles.linkWrapper}>
-      <Link className={styles.archiveLink} href={`/${config.blog.BLOG_PATH}`}>
-          {config.blocks.CONTENT_BLOG_SECTION_BLOG_ARCHIVE_LEAD}
+      <Link className={styles.archiveLink} href={`/${config.blog.path}`}>
+          {config.blocks.blogsArchivePageCTA}
        </Link>
       </footer>
     </section>

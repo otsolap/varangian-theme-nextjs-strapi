@@ -48,7 +48,7 @@ export default function RelatedArticles ({ title, description, selectTheme, docu
             })}
             </div>
         <footer className={styles.linkWrapper}>
-        <Link className={styles.archiveLink} href={`/${config.blog.CATEGORY_PATH}/${currentCategory}`}>
+        <Link className={styles.archiveLink} href={`/${config.categories.path}/${currentCategory}`}>
             {config.blog.RELATED_ARTICLES_LINK_TITLE}
         </Link>
         </footer>
