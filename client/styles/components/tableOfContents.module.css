@@ -10,6 +10,8 @@
     background-color: var(--color-primary);
     border: 2px solid var(--color-secondary);
     border-radius: var(--spacing-quarter);
+    margin-left: var(--spacing-double);
+    margin-right: var(--spacing-double);
 }
 
 .wrapper {
@@ -30,10 +32,22 @@
   color: var(--color-secondary);
 }
 
-/* Desktop Styles */
-@media (width >= 1440px) {
+/* iPad Styles */
+@media (width >= 768px) {
+
+    .tableOfContents {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
     .wrapper {
         width: 100%;
+    }
+}
+
+/* Laptop styles */
+@media (width >= 1024px) {
+    .wrapper {
         max-width: var(--container-mobile);
     }
 }
