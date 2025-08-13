@@ -30,14 +30,14 @@ export default async function BlogSlug(props) {
     </div>
     <ArticleAuthor author={author} />
     <RelatedArticles
-      title={config.blog.RELATED_ARTICLES_TITLE}
+      title="Related Articles on"
       categoryTitle={category.title}
       currentCategory={category.slug}
       documentId={documentId}
       selectTheme="primary"
     />
     <Blogs 
-      title={config.blog.LATEST_ARTICLES_TITLE}
+      title="All latest articles"
       selectTheme="secondary"
       filter="latest" 
       />
