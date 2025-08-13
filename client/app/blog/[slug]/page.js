@@ -34,7 +34,7 @@ export default async function BlogSlug(props) {
       categoryTitle={category.title}
       currentCategory={category.slug}
       documentId={documentId}
-      selectTheme="secondary"
+      selectTheme="primary"
     />
     <Blogs 
       title={config.blog.LATEST_ARTICLES_TITLE}
@@ -51,7 +51,7 @@ export async function generateStaticParams() {
     Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
   };
 
-  const res =  await fetch(getStrapiURL(`/api/articles`), { headers })
+  const res =  await fetch(getStrapiURL(`/${config.blog.API_ARTICLES_QUERY}`), { headers })
   const resData = await res.json()
   const slugs = resData.data.map(item => item.slug)
   return slugs.map(slug => ({
@@ -61,7 +61,7 @@ export async function generateStaticParams() {
 
 async function getContent(params) {
   try {
-    const res = await fetch(getStrapiURL(`/${config.blog.API_ARTICLE_PAGE_CONTENT_QUERY}${params.slug}`));
+    const res = await fetch(getStrapiURL(`/${config.blog.API_ARTICLES_QUERY}?${config.blog.API_ARTICLE_HEADER_CONTENT_QUERY}&${config.blocks.API_SEO_BLOCK_QUERY}&${config.blog.API_ARTICLE_DYNAMIC_ZONE_BLOCKS}&${config.blocks.API_FILTERS_SLUG}=${params.slug}`));
     const resData = await res.json();
 
     if (!resData.data || resData.data.length === 0) notFound();

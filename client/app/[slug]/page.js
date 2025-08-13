@@ -44,7 +44,7 @@ async function getContent(params) {
   };
 
   try {
-    const apiResponse = await fetch(getStrapiURL(`/${config.pages.API_PAGES_QUERY}?${config.blocks.API_DYNAMIC_ZONE_BLOCKS}&${config.blocks.API_SEO_BLOCK_QUERY}&filters[slug][$eq]=${params.slug}`), { headers });
+    const apiResponse = await fetch(getStrapiURL(`/${config.pages.API_PAGES_QUERY}?${config.blocks.API_DYNAMIC_ZONE_BLOCKS}&${config.blocks.API_SEO_BLOCK_QUERY}&${config.blocks.API_FILTERS_SLUG}=${params.slug}`), { headers });
     const fetchedData = await apiResponse.json();
     
     if (!fetchedData.data || fetchedData.data.length === 0) notFound();

@@ -127,6 +127,7 @@
 
 /* Desktop Styles */
 @media (width >= 1440px) {
+  
   .header {
     max-width: var(--container-ipad-landscape);
     flex: 0 0 50%;
@@ -137,19 +138,9 @@
     gap: var(--spacing-double);
   }
 
-  .imageContainer,
   .content {
     max-width: 50%;
     flex: 0 0 50%;
-  }
-
-  .imageContainer {
-    display: block;
-  }
-
-  .image {
-    object-fit: contain;
-    aspect-ratio: 16/9;
   }
 
   .text {

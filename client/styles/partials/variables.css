@@ -35,7 +35,7 @@
 
     /* Random colors */
     --color-accent: var(--color-success-light);
-    --color-info: var(--color-teal-light);
+    --color-info: var(--color-tertiary-light);
     --color-alert: var(--color-error-light);
 
     /* Spacing */

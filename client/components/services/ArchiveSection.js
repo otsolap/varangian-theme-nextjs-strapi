@@ -31,7 +31,7 @@ export const ArchiveSection = ({ items, service_types }) => {
         {paginatedPosts.length > 0 ? (
             paginatedPosts.map((item, i) => (
               <ServicesItem
-                key={i}
+                key={item.id || `archive-blog-item-${i}`}
                 image={item.image}
                 title={item.title}
                 price={item.price}

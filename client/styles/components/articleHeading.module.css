@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: var(--spacing-double) var(--spacing-single);
+    padding: var(--spacing-double);
     background-color: var(--color-primary);
     max-width: var(--container-desktop);
     margin: 0 auto;

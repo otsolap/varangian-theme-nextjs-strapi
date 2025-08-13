@@ -418,12 +418,16 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     blocks: Schema.Attribute.DynamicZone<
       [
-        'blocks.quote',
-        'blocks.article-text-block',
-        'blocks.image-block',
         'blocks.video-embed',
-        'blocks.image-gallery',
         'blocks.table',
+        'blocks.quote',
+        'blocks.notes',
+        'blocks.image-gallery',
+        'blocks.image-block',
+        'blocks.buttons',
+        'blocks.article-text-block',
+        'blocks.accordion',
+        'blocks.banner',
       ]
     >;
     category: Schema.Attribute.Relation<'manyToMany', 'api::category.category'>;
@@ -891,7 +895,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.cards',
         'blocks.hero',
         'blocks.banner',
-        'blocks.media-mix',
         'blocks.text-area',
         'blocks.form-embed',
         'blocks.video-embed',
@@ -901,6 +904,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.services',
         'blocks.buttons',
         'blocks.table',
+        'blocks.notes',
+        'blocks.text-and-image',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
