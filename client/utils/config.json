@@ -1,10 +1,10 @@
 {
     "global": {
-        "navigation":"api/navigation?populate[0]=blocks&populate[1]=blocks.icon&populate[2]=button",
-        "footer":"api/footer?populate[0]=blocks&populate[1]=blocks.image&populate[2]=blocks.links&populate[3]=blocks.socialMedia&populate[4]=blocks.blogAnchors&populate[5]=blocks.blogAnchors.blogs&populate[6]=subFooter&populate[7]=subFooter.link",
-        "baseSEO":"api/base-seo?populate[0]=imageBlock.image",
-        "notFound": "api/not-found?populate[0]=buttons",
-        "blogNavigation": "api/blog-navigation?populate[0]=social&populate[1]=button",
+        "navigation":"api/navigation?populate[blocks][on][util.menu-item][populate]=*&populate[button]=*",
+        "footer":"api/footer?populate[blocks][on][util.footer-social-media][populate][socialMedia]=*&populate[blocks][on][util.footer-column][populate]=*&populate[subFooter][populate]=*",
+        "baseSEO":"api/base-seo?populate[imageBlock][populate]=image",
+        "notFound": "api/not-found?populate[buttons][populate]=*",
+        "blogNavigation": "api/blog-navigation?populate[social][populate]=*&populate[button][populate]=*",
         "blogNavigationDetails": "api/articles?fields=title,slug"
     },
     "endpoints": {
@@ -17,20 +17,20 @@
         "contacts":"api/contacts"
     },
     "pages": {
-        "servicesBanner":"api/services-banner?populate[0]=banner&populate[1]=banner.button&populate[2]=banner.image",
-        "subscribeForm": "api/subscribe-form?populate[0]=email"
+        "servicesBanner":"api/services-banner?populate[banner][populate]=*",
+        "subscribeForm": "api/subscribe-form?populate[email][populate]=*"
     },
     "blocks": {
         "seo":"populate[seo][populate][imageBlock][populate]=image",
         "dynamicZone": "populate[blocks][on][blocks.accordion][populate]=accordions&populate[blocks][on][blocks.banner][populate]=*&populate[blocks][on][blocks.blogs][populate]=blogs.image&populate[blocks][on][blocks.buttons][populate]=*&populate[blocks][on][blocks.blogs][populate]=blogs.category&populate[blocks][on][blocks.cards][populate]=cards.image&populate[blocks][on][blocks.form-embed][populate]=form.inputs.options&populate[blocks][on][blocks.hero][populate]=image&populate[blocks][on][blocks.hero][populate]=buttons&populate[blocks][on][blocks.image-block][populate]=image&populate[blocks][on][blocks.image-gallery][populate]=images&populate[blocks][on][blocks.notes][populate]=*&populate[blocks][on][blocks.services][populate]=services.image&populate[blocks][on][blocks.services][populate]=services.service_type&populate[blocks][on][blocks.table][populate]=tableHeader&populate[blocks][on][blocks.table][populate]=tableRow.tableCell&populate[blocks][on][blocks.text-area][populate]=*&populate[blocks][on][blocks.text-and-image][populate]=image&populate[blocks][on][blocks.video-embed][populate]=*&populate[blocks][on][blocks.quote][populate]=*",
-        "blogsLatestArticles":"api/articles?populate[0]=image&populate[1]=category&sort[0]=createdAt:desc&pagination[start]=0&pagination[limit]=3",
+        "blogsLatestArticles":"api/articles?populate[image][populate]=*&populate[category[populate]=*&sort=createdAt:desc&pagination[start]=0&pagination[limit]=3",
         "filterBySlug": "filters[slug][$eq]",
         "blogsArchivePageCTA":"See blog archive",
         "servicesArchivePageCTA":"See all services"
     },
     "services": {
         "path":"services",
-        "archivePage":"api/service-archive-page?populate[0]=seo&populate[1]=seo.imageBlock.image&populate[2]=hero&populate[3]=hero.buttons&populate[4]=hero.image",
+        "archivePage":"api/service-archive-page?populate[seo][populate][imageBlock][populate]=image&populate[hero][populate][buttons][populate]=*&populate[hero][populate][image][populate]=*",
         "archivePageContent":"api/services?populate[0]=image&populate[1]=service_types", 
         "content":"api/services?populate[0]=seo&populate[1]=seo.imageBlock.image&populate[2]=blocks&populate[3]=blocks.image&populate[4]=blocks.accordion&populate[5]=blocks.accordions&populate[6]=blocks.button&populate[7]=blocks.buttons&populate[8]=blocks.blogs&populate[9]=blocks.blogs.author&populate[10]=blocks.blogs.image&populate[11]=blocks.blogs.category&populate[12]=blocks.link&populate[13]=blocks.cards&populate[14]=blocks.cards.image&populate[15]=blocks.form&populate[16]=blocks.form.inputs&populate[17]=blocks.form.inputs.options&populate[18]=blocks.form.image&populate[19]=blocks.form.button&populate[20]=blocks.images.image&populate[21]=blocks.mediaMixItems&populate[22]=blocks.mediaMixItems.image&filters[slug][$eq]="
     },
@@ -39,7 +39,7 @@
         "API_SERVICE_TYPES_CONTENT_QUERY":"api/service-types?populate[0]=services&populate[1]=services.image&populate[2]=services.service_types&populate[3]=hero&populate[4]=hero.buttons&populate[5]=hero.image&populate[6]=seo"
     },
     "blog": {
-        "archivePage":"api/article-archive-page?populate[0]=seo&populate[1]=seo.imageBlock.image&populate[2]=hero&populate[3]=hero.buttons&populate[4]=hero.image",
+        "archivePage":"api/article-archive-page?populate[seo][populate][imageBlock][populate]=image&populate[hero][populate][buttons][populate]=*&populate[hero][populate][image][populate]=*",
         "path":"blog",
         "archivePageContent":"api/articles?populate[0]=author&populate[1]=author.image&populate[2]=author.socialMedia&populate[3]=image&populate[4]=blocks&populate[5]=blocks.image&populate[6]=category&sort[0]=createdAt:desc",
         "articleHeader":"[populate][author][populate]=image&[populate][author][populate]=socialMedia&populate[category][populate]=*&populate[image][populate]=*",
