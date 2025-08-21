@@ -7,6 +7,12 @@
     padding: var(--spacing-single);
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-single);
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -17,6 +23,8 @@
 
 /* Tablet Styles */
 @media (width >= 768px) {
+
+    .container,
     .wrapper {
         flex-direction: row;
     }
@@ -24,6 +32,12 @@
 
 /* Desktop Styles */
 @media (width >= 1440px) {
+    .header {
+        max-width: var(--container-ipad-landscape);
+        flex: 0 0 50%;
+    }
+    
+    .container,
     .wrapper {
         gap: var(--spacing-triple);
     }
