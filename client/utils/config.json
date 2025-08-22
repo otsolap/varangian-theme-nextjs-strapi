@@ -23,7 +23,7 @@
     "blocks": {
         "seo":"populate[seo][populate][imageBlock][populate]=image",
         "dynamicZone": "populate[blocks][on][blocks.accordion][populate]=accordions&populate[blocks][on][blocks.banner][populate]=*&populate[blocks][on][blocks.blogs][populate]=blogs.image&populate[blocks][on][blocks.buttons][populate]=*&populate[blocks][on][blocks.blogs][populate]=blogs.category&populate[blocks][on][blocks.cards][populate]=cards.image&populate[blocks][on][blocks.form-embed][populate]=form.inputs.options&populate[blocks][on][blocks.hero][populate]=image&populate[blocks][on][blocks.hero][populate]=buttons&populate[blocks][on][blocks.image-block][populate]=image&populate[blocks][on][blocks.image-gallery][populate]=images&populate[blocks][on][blocks.notes][populate]=*&populate[blocks][on][blocks.services][populate]=services.image&populate[blocks][on][blocks.services][populate]=services.service_type&populate[blocks][on][blocks.table][populate]=tableHeader&populate[blocks][on][blocks.table][populate]=tableRow.tableCell&populate[blocks][on][blocks.text-area][populate]=*&populate[blocks][on][blocks.text-and-image][populate]=image&populate[blocks][on][blocks.video-embed][populate]=*&populate[blocks][on][blocks.quote][populate]=*",
-        "blogsLatestArticles":"api/articles?populate[image][populate]=*&populate[category[populate]=*&sort=createdAt:desc&pagination[start]=0&pagination[limit]=3",
+        "blogsLatestArticles":"api/articles?populate[image][populate]=*&populate[category][populate]=*&sort=createdAt:desc&pagination[start]=0&pagination[limit]=3",
         "filterBySlug": "filters[slug][$eq]",
         "blogsArchivePageCTA":"See blog archive",
         "servicesArchivePageCTA":"See all services"
@@ -35,7 +35,7 @@
         "content":"api/services?populate[0]=seo&populate[1]=seo.imageBlock.image&populate[2]=blocks&populate[3]=blocks.image&populate[4]=blocks.accordion&populate[5]=blocks.accordions&populate[6]=blocks.button&populate[7]=blocks.buttons&populate[8]=blocks.blogs&populate[9]=blocks.blogs.author&populate[10]=blocks.blogs.image&populate[11]=blocks.blogs.category&populate[12]=blocks.link&populate[13]=blocks.cards&populate[14]=blocks.cards.image&populate[15]=blocks.form&populate[16]=blocks.form.inputs&populate[17]=blocks.form.inputs.options&populate[18]=blocks.form.image&populate[19]=blocks.form.button&populate[20]=blocks.images.image&populate[21]=blocks.mediaMixItems&populate[22]=blocks.mediaMixItems.image&filters[slug][$eq]="
     },
     "serviceTypes": {
-        "path":"service-types",
+        "path":"service-type",
         "API_SERVICE_TYPES_CONTENT_QUERY":"api/service-types?populate[0]=services&populate[1]=services.image&populate[2]=services.service_types&populate[3]=hero&populate[4]=hero.buttons&populate[5]=hero.image&populate[6]=seo"
     },
     "blog": {
