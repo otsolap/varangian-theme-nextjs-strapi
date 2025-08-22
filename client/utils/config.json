@@ -36,7 +36,7 @@
     },
     "serviceTypes": {
         "path":"service-type",
-        "API_SERVICE_TYPES_CONTENT_QUERY":"api/service-types?populate[0]=services&populate[1]=services.image&populate[2]=services.service_types&populate[3]=hero&populate[4]=hero.buttons&populate[5]=hero.image&populate[6]=seo"
+        "content":"api/service-types?populate[0]=services&populate[1]=services.image&populate[2]=services.service_type&populate[3]=hero&populate[4]=hero.buttons&populate[5]=hero.image&populate[6]=seo"
     },
     "blog": {
         "archivePage":"api/article-archive-page?populate[seo][populate][imageBlock][populate]=image&populate[hero][populate][buttons][populate]=*&populate[hero][populate][image][populate]=*",
