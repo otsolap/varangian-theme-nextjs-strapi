@@ -36,21 +36,21 @@
     },
     "serviceTypes": {
         "path":"service-type",
-        "content":"api/service-types?populate[0]=services&populate[1]=services.image&populate[2]=services.service_type&populate[3]=hero&populate[4]=hero.buttons&populate[5]=hero.image&populate[6]=seo"
+        "content":"api/service-types?populate[services][populate]=image&populate[services][populate]=service_type&populate[hero][populate]=*"
     },
     "blog": {
-        "archivePage":"api/article-archive-page?populate[seo][populate][imageBlock][populate]=image&populate[hero][populate][buttons][populate]=*&populate[hero][populate][image][populate]=*",
+        "archivePage":"api/article-archive-page?populate[hero][populate]=*",
         "path":"blog",
-        "archivePageContent":"api/articles?populate[0]=author&populate[1]=author.image&populate[2]=author.socialMedia&populate[3]=image&populate[4]=blocks&populate[5]=blocks.image&populate[6]=category&sort[0]=createdAt:desc",
+        "archivePageContent":"api/articles?populate[author][populate]=image&populate[author][populate]=socialMedia&populate[image][populate]=*&populate[category][populate]=*&sort=createdAt:desc",
         "articleHeader":"[populate][author][populate]=image&[populate][author][populate]=socialMedia&populate[category][populate]=*&populate[image][populate]=*",
         "dynamicZone":"populate[blocks][on][blocks.accordion][populate]=accordions&populate[blocks][on][blocks.article-text-block][populate]=*&populate[blocks][on][blocks.banner][populate]=*&populate[blocks][on][blocks.buttons][populate]=*&populate[blocks][on][blocks.image-block][populate]=image&populate[blocks][on][blocks.image-gallery][populate]=images&populate[blocks][on][blocks.notes][populate]=*&populate[blocks][on][blocks.table][populate]=tableHeader&populate[blocks][on][blocks.table][populate]=tableRow.tableCell",
-        "relatedArticlesCategoryFilter":"api/articles?sort[0]=createdAt:desc&filters[category][slug][$eq]=",
+        "relatedArticlesCategoryFilter":"api/articles?sort=createdAt:desc&filters[category][slug][$eq]=",
         "relatedArticlesIDFilter": "&filters[documentId][$ne]=",
         "relatedArticlesContent": "&populate[1]=image"
     },
     "categories": {
         "path":"category",
-        "content":"api/categories?populate[0]=articles&populate[1]=articles.image&populate[2]=articles.author&populate[3]=articles.category&populate[4]=hero&populate[5]=hero.buttons&populate[6]=hero.image&populate[7]=seo&populate[8]=seo.imageBlock.image"
+        "content":"api/categories?pi/categories?populate[0]=articles&populate[articles][populate]=image&populate[articles][populate]=author&populate[articles][populate]=category&populate[hero][populate]=buttons&populate[hero][populate]=image"
     },
     "forms": {
         "path":"api/forms?filters[title][$eq]="
