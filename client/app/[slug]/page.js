@@ -27,7 +27,7 @@ export async function generateStaticParams() {
     Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
   };
 
-  const res =  await fetch(getStrapiURL(`/${config.pages.API_PAGES_QUERY}`), { headers} )
+  const res =  await fetch(getStrapiURL(`/${config.endpoints.pages}`), { headers} )
   const resData = await res.json()
   const slugs = resData.data.map(item => item.slug)
   
@@ -44,7 +44,7 @@ async function getContent(params) {
   };
 
   try {
-    const apiResponse = await fetch(getStrapiURL(`/${config.pages.API_PAGES_QUERY}?${config.blocks.API_DYNAMIC_ZONE_BLOCKS}&${config.blocks.API_SEO_BLOCK_QUERY}&${config.blocks.API_FILTERS_SLUG}=${params.slug}`), { headers });
+    const apiResponse = await fetch(getStrapiURL(`/${config.endpoints.pages}?${config.blocks.dynamicZone}&${config.blocks.seo}&${config.blocks.filterBySlug}=${params.slug}`), { headers });
     const fetchedData = await apiResponse.json();
     
     if (!fetchedData.data || fetchedData.data.length === 0) notFound();

@@ -43,11 +43,6 @@
     "price": {
       "type": "string"
     },
-    "service_type": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::service-type.service-type"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -62,6 +57,12 @@
         "dollar",
         "euro"
       ]
+    },
+    "service_type": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service-type.service-type",
+      "mappedBy": "services"
     }
   }
 }

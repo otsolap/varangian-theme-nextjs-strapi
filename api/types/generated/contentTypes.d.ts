@@ -810,42 +810,6 @@ export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiNewsletterBannerNewsletterBanner
-  extends Struct.SingleTypeSchema {
-  collectionName: 'newsletter_banners';
-  info: {
-    description: '';
-    displayName: 'newsletterBanner';
-    pluralName: 'newsletter-banners';
-    singularName: 'newsletter-banner';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Component<'partials.button', false>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::newsletter-banner.newsletter-banner'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    selectTheme: Schema.Attribute.Enumeration<
-      ['primary', 'secondary', 'tertiary']
-    >;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiNotFoundNotFound extends Struct.SingleTypeSchema {
   collectionName: 'not_founds';
   info: {
@@ -984,6 +948,7 @@ export interface ApiServiceTypeServiceType extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'util.seo', false>;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -1034,7 +999,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'util.seo', false>;
     service_type: Schema.Attribute.Relation<
-      'oneToOne',
+      'manyToMany',
       'api::service-type.service-type'
     >;
     slug: Schema.Attribute.UID<'title'>;
@@ -1663,7 +1628,6 @@ declare module '@strapi/strapi' {
       'api::form.form': ApiFormForm;
       'api::home.home': ApiHomeHome;
       'api::navigation.navigation': ApiNavigationNavigation;
-      'api::newsletter-banner.newsletter-banner': ApiNewsletterBannerNewsletterBanner;
       'api::not-found.not-found': ApiNotFoundNotFound;
       'api::page.page': ApiPagePage;
       'api::service-archive-page.service-archive-page': ApiServiceArchivePageServiceArchivePage;
