@@ -33,7 +33,7 @@ export async function generateStaticParams() {
 async function getContent(params) {
     try {
       const urls = [
-        getStrapiURL(`/${config.categories.content}&${config.blocks.filterBySlug}=${params.slug}`),
+        getStrapiURL(`/${config.endpoints.categories}?${config.categories.content}&${config.blocks.filterBySlug}=${params.slug}`),
         getStrapiURL(`/${config.endpoints.categories}`),
       ];
   

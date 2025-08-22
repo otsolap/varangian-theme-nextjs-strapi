@@ -31,8 +31,8 @@
     "services": {
         "path":"services",
         "archivePage":"api/service-archive-page?populate[seo][populate][imageBlock][populate]=image&populate[hero][populate][buttons][populate]=*&populate[hero][populate][image][populate]=*",
-        "archivePageContent":"api/services?populate[0]=image&populate[1]=service_types", 
-        "content":"api/services?populate[0]=seo&populate[1]=seo.imageBlock.image&populate[2]=blocks&populate[3]=blocks.image&populate[4]=blocks.accordion&populate[5]=blocks.accordions&populate[6]=blocks.button&populate[7]=blocks.buttons&populate[8]=blocks.blogs&populate[9]=blocks.blogs.author&populate[10]=blocks.blogs.image&populate[11]=blocks.blogs.category&populate[12]=blocks.link&populate[13]=blocks.cards&populate[14]=blocks.cards.image&populate[15]=blocks.form&populate[16]=blocks.form.inputs&populate[17]=blocks.form.inputs.options&populate[18]=blocks.form.image&populate[19]=blocks.form.button&populate[20]=blocks.images.image&populate[21]=blocks.mediaMixItems&populate[22]=blocks.mediaMixItems.image"
+        "archivePageContent":"api/services?populate[image][populate]=*&populate[service_type][populate]=*", 
+        "dynamicZone":"populate[blocks][on][blocks.accordion][populate]=accordions&populate[blocks][on][blocks.banner][populate]=*&populate[blocks][on][blocks.buttons][populate]=*&populate[blocks][on][blocks.cards][populate]=cards.image&populate[blocks][on][blocks.form-embed][populate]=form.inputs.options&populate[blocks][on][blocks.hero][populate]=image&populate[blocks][on][blocks.hero][populate]=buttons&populate[blocks][on][blocks.image-block][populate]=image&populate[blocks][on][blocks.image-gallery][populate]=images&populate[blocks][on][blocks.notes][populate]=*&populate[blocks][on][blocks.table][populate]=tableHeader&populate[blocks][on][blocks.table][populate]=tableRow.tableCell&populate[blocks][on][blocks.text-area][populate]=*&populate[blocks][on][blocks.text-and-image][populate]=image&populate[blocks][on][blocks.video-embed][populate]=*&populate[blocks][on][blocks.quote][populate]=*"
     },
     "serviceTypes": {
         "path":"service-type",
@@ -46,11 +46,11 @@
         "dynamicZone":"populate[blocks][on][blocks.accordion][populate]=accordions&populate[blocks][on][blocks.article-text-block][populate]=*&populate[blocks][on][blocks.banner][populate]=*&populate[blocks][on][blocks.buttons][populate]=*&populate[blocks][on][blocks.image-block][populate]=image&populate[blocks][on][blocks.image-gallery][populate]=images&populate[blocks][on][blocks.notes][populate]=*&populate[blocks][on][blocks.table][populate]=tableHeader&populate[blocks][on][blocks.table][populate]=tableRow.tableCell",
         "relatedArticlesCategoryFilter":"api/articles?sort=createdAt:desc&filters[category][slug][$eq]=",
         "relatedArticlesIDFilter": "&filters[documentId][$ne]=",
-        "relatedArticlesContent": "&populate[1]=image"
+        "relatedArticlesContent": "&populate[image][populate]=*"
     },
     "categories": {
         "path":"category",
-        "content":"api/categories?pi/categories?populate[0]=articles&populate[articles][populate]=image&populate[articles][populate]=author&populate[articles][populate]=category&populate[hero][populate]=buttons&populate[hero][populate]=image"
+        "content":"populate[articles][populate]=image&populate[articles][populate]=author&populate[articles][populate]=category&populate[hero][populate]=*"
     },
     "forms": {
         "path":"api/forms?filters[title][$eq]="
