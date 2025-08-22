@@ -21,13 +21,13 @@ export const ArchiveSection = ({ items, service_types }) => {
   const paginatedPosts = paginate(items, currentPage, pageSize)
 
   return (
-    <>
+    <section>
       {service_types && 
         <header className={styles.header}>
           <TaxonomyLinks service_types={service_types} />
         </header>
       }
-      <div className={styles.wrapper}>
+      <div className={styles.container}>
         {paginatedPosts.length > 0 ? (
             paginatedPosts.map((item, i) => (
               <ServicesItem
@@ -43,6 +43,8 @@ export const ArchiveSection = ({ items, service_types }) => {
           ) : (
             <p>No items found</p>
         )}
+      </div>
+      <div className={styles.wrapper}>
         <Pagination
           items={items.length}
           currentPage={currentPage}
@@ -50,6 +52,6 @@ export const ArchiveSection = ({ items, service_types }) => {
           onPageChange={onPageChange}
         />
       </div>
-    </>
+    </section>
   )
 }
