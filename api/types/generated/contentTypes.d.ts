@@ -754,11 +754,14 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'blocks.hero',
         'blocks.image-block',
         'blocks.image-gallery',
-        'blocks.media-mix',
         'blocks.quote',
         'blocks.services',
         'blocks.text-area',
         'blocks.video-embed',
+        'blocks.text-and-image',
+        'blocks.buttons',
+        'blocks.table',
+        'blocks.notes',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -978,10 +981,12 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
         'blocks.hero',
         'blocks.image-block',
         'blocks.image-gallery',
-        'blocks.media-mix',
         'blocks.quote',
         'blocks.text-area',
         'blocks.video-embed',
+        'blocks.text-and-image',
+        'blocks.table',
+        'blocks.buttons',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

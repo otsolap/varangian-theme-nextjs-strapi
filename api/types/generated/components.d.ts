@@ -148,24 +148,6 @@ export interface BlocksImageGallery extends Struct.ComponentSchema {
   };
 }
 
-export interface BlocksMediaMix extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_media_mixes';
-  info: {
-    description: '';
-    displayName: 'mediaMix';
-  };
-  attributes: {
-    mediaMixItems: Schema.Attribute.Component<'partials.media-mix-item', true> &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 2;
-          min: 2;
-        },
-        number
-      >;
-  };
-}
-
 export interface BlocksNotes extends Struct.ComponentSchema {
   collectionName: 'components_blocks_notes';
   info: {
@@ -455,22 +437,6 @@ export interface PartialsListItem extends Struct.ComponentSchema {
   };
 }
 
-export interface PartialsMediaMixItem extends Struct.ComponentSchema {
-  collectionName: 'components_partials_media_mix_items';
-  info: {
-    description: '';
-    displayName: 'mediaMixItem';
-  };
-  attributes: {
-    image: Schema.Attribute.Media<'images'>;
-    markdown: Schema.Attribute.RichText;
-    type: Schema.Attribute.Enumeration<['markdown', 'image', 'video']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'markdown'>;
-    video: Schema.Attribute.String;
-  };
-}
-
 export interface PartialsTableCell extends Struct.ComponentSchema {
   collectionName: 'components_partials_table_cells';
   info: {
@@ -670,7 +636,6 @@ declare module '@strapi/strapi' {
       'blocks.hero': BlocksHero;
       'blocks.image-block': BlocksImageBlock;
       'blocks.image-gallery': BlocksImageGallery;
-      'blocks.media-mix': BlocksMediaMix;
       'blocks.notes': BlocksNotes;
       'blocks.quote': BlocksQuote;
       'blocks.services': BlocksServices;
@@ -690,7 +655,6 @@ declare module '@strapi/strapi' {
       'partials.card': PartialsCard;
       'partials.link': PartialsLink;
       'partials.list-item': PartialsListItem;
-      'partials.media-mix-item': PartialsMediaMixItem;
       'partials.table-cell': PartialsTableCell;
       'partials.table-header': PartialsTableHeader;
       'partials.table-row': PartialsTableRow;
