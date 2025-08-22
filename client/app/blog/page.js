@@ -24,7 +24,7 @@ async function getContent() {
 
   try {
     const urls = [
-      getStrapiURL(`/${config.blog.archivePage}`),
+      getStrapiURL(`/${config.blog.archivePage}&${config.blocks.seo}`),
       getStrapiURL(`/${config.blog.archivePageContent}`),
       getStrapiURL(`/${config.endpoints.categories}`),
     ];
